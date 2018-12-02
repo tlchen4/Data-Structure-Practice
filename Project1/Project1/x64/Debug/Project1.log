@@ -1,0 +1,19 @@
+﻿  DoublyLinkedList.cpp
+  list.cpp
+c:\users\timolol\git-repositories\data-structure-practice\project1\project1\list.cpp(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  LLtoArray.cpp
+  LL_Queue.cpp
+  main.cpp
+  Print.cpp
+  Reverse.cpp
+  Deletion.cpp
+  Search.cpp
+  SinglyLinkedList.cpp
+c:\users\timolol\git-repositories\data-structure-practice\project1\project1\singlylinkedlist.cpp(46): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Sort.cpp
+  StackLinkedList.cpp
+  StackMain.cpp
+  VectorMain.cpp
+  Generating Code...
+c:\users\timolol\git-repositories\data-structure-practice\project1\project1\doublylinkedlist.cpp(124): warning C4715: 'DeleteDouble': not all control paths return a value
+  Project1.vcxproj -> C:\Users\Timolol\Git-Repositories\Data-Structure-Practice\Project1\x64\Debug\Linked_List.exe
