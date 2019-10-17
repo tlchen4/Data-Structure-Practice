@@ -28,6 +28,9 @@
     <Filter Include="Source Files\Queue">
       <UniqueIdentifier>{eb009117-66fe-4ccb-8eef-62b90f06cfcb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Permutation">
+      <UniqueIdentifier>{96c0c0e9-4a98-4641-b64e-e06375a69b93}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Deletion.cpp">
@@ -71,6 +74,9 @@
     </ClCompile>
     <ClCompile Include="LL_Queue.cpp">
       <Filter>Source Files\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="Permutation.cpp">
+      <Filter>Source Files\Permutation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -121,6 +121,7 @@
     <ClCompile Include="LLtoArray.cpp" />
     <ClCompile Include="LL_Queue.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Permutation.cpp" />
     <ClCompile Include="Print.cpp" />
     <ClCompile Include="Reverse.cpp" />
     <ClCompile Include="Deletion.cpp" />
