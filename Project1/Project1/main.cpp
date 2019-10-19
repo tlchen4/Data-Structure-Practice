@@ -7,7 +7,7 @@ int main() {
 	int flag = 1;
 
 	while (flag == 1) {
-		printf("0 - Quit \n1-Singly Linked List \n2-Double Linked List \n3-Stack \n4-LLQueue\n5-Permutation \n");
+		printf("0 - Quit \n1-Singly Linked List \n2-Double Linked List \n3-Stack \n4-LLQueue\n5-Arrays \n");
 		scanf_s("%d", &decision);
 
 		switch (decision) {
@@ -29,7 +29,7 @@ int main() {
 			LLQueue();
 			break;
 		case 5:
-			Permutation();
+			ArrayMain();
 			break;
 		default:
 			printf("Invalid input. Please try again. \n");

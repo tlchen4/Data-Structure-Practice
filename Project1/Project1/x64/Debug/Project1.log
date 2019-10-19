@@ -1,5 +1,6 @@
-﻿  ArraySort.cpp
-  Permutation.cpp
-c:\users\timolol\git-repositories\data-structure-practice\project1\project1\permutation.cpp(57): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+﻿  ArrayMain.cpp
+c:\users\timolol\git-repositories\data-structure-practice\project1\project1\arraymain.cpp(10): warning C4101: 'x': unreferenced local variable
+  Deletion.cpp
+  main.cpp
   Generating Code...
   Project1.vcxproj -> C:\Users\Timolol\Git-Repositories\Data-Structure-Practice\Project1\x64\Debug\Linked_List.exe
