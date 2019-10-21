@@ -11,4 +11,7 @@ void LLQueue();
 //Arrays
 void ArrayMain();
 void Permutation();
+void ArraySort();
+void ArrayPrint(int* List, int size);
+
 #endif

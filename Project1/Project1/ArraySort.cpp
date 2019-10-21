@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "Main_Header.h"
 
-int* merger(int* arr, int left, int right, int mid) {
+void merger(int* arr, int left, int right, int mid) {
 	//re-merges two sorted halves of an array into a single sorted piece
 	//first piece has first index at left until and including mid, second piece will start at mid+1 and continue up to and include index "right"
 	int n1, n2;
@@ -10,26 +11,66 @@ int* merger(int* arr, int left, int right, int mid) {
 	n2 = right - mid;
 
 	//we will need to create a temporary variable to use as a floating placeholder as we compare the left piece vs the right piece and a second placeholder for when we need to re-insert the placeholder itself back into the array
-	int placeholder1, placeholder2;
-		//In C++, the size of the array in stack memory must be known at compile time. We cannot have a scenario where the size is only known at runtime. We could make it create an array in heap memory with the new function though.
-		//hence why we're using a single variable to do the data manipulations instead of creating two extra copies of the left and right piece and comparing those pieces while re-inserting back to the original array
-		//we could do that, but we would need a lot of "new" and "delete" functions to make it work
-	for (int i = 1; i <= (n1 + n2); i++) {
-		//i will represent the number of elements inserted, i=1 will represent re-insertion of first element in arr, continue until n1+n2 elements (aka total size of the left+right pieces) are re-inserted in sorted order
-		if (i == 1) {
-
-			if (arr[left] <= arr[right]) {
-
-				
-
-
+	int* leftlist = new int[n1];
+	int* rightlist = new int[n2];
+		//In C++, the size of the array in stack memory must be known at compile time. We cannot have a scenario where the size is only known at runtime. We can make it create an array in heap memory with the new function though.
+		//recall the "new" operator returns a pointer to the address of the allocated space
+	for (int i = 0; i < n1; i++) {
+		leftlist[i] = arr[left + i];
+	}
+	
+	for (int i = 0; i < n2; i++) {
+		rightlist[i] = arr[mid + 1 + i];
+		
+	}
+	//copy data into our temporary lists
+	int i = 0;
+	//re-initialize i
+	int j = 0;
+	int k = 0;
+	//i will be used to track the current position in temporary left list, j for temporary right list, k for current position of insertion for original array
+	while (i < n1 || j<n2) {
+		if (leftlist[i] <= rightlist[j]) {
+			arr[k] = leftlist[i];
+			i++;
+		}
+		else {
+			arr[k] = rightlist[j];
+			j++;
 
 			}
+		k++;
+		
+	}
+	if (i == n1) {
+		//this means left side finished first, still need to replace the rest of temporary rightlist into the remainder of the original array
+		for (j; j < n2; j++) {
+			arr[k] = rightlist[j];
+			k++;
 
 		}
-		else if(arr[left]<)
-
+	}
+	else if(j==n2){
+		//this means right side finished first
+		for (i; i < n1; i++) {
+			arr[k] = leftlist[i];
+			k++;
+		}
 	}
 
+	delete leftlist;
+	delete rightlist;
+	//free our temporary lists from memory before exiting the function since these variables persist even after the function is over
 
+	return;
+	//don't need to return anything if we directly modify the array via its address(and not a copy of it)
+}
+
+
+void ArraySort() {
+	int Arr[5] = {5,9,1,2,3};
+	merger(Arr, 0, 4, 2);
+	ArrayPrint(Arr, 5);
+	
+	return;
 }

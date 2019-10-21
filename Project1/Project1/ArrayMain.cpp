@@ -24,6 +24,7 @@ void ArrayMain() {
 		case 1:
 			break;
 		case 2:
+			ArraySort();
 			break;
 		case 3:
 			Permutation();

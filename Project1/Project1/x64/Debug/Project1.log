@@ -1,6 +1,3 @@
-﻿  ArrayMain.cpp
-c:\users\timolol\git-repositories\data-structure-practice\project1\project1\arraymain.cpp(10): warning C4101: 'x': unreferenced local variable
-  Deletion.cpp
-  main.cpp
-  Generating Code...
-  Project1.vcxproj -> C:\Users\Timolol\Git-Repositories\Data-Structure-Practice\Project1\x64\Debug\Linked_List.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Linked_List.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  ArraySort.cpp
+  Project1.vcxproj -> C:\Users\Timolol\Git-Repositories\Data-Structure-Practice\Project1\x64\Debug\DataStructure.exe
