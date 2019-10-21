@@ -95,5 +95,8 @@
     <ClInclude Include="Main_Header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ArrayHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

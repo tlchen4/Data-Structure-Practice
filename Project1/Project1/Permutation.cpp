@@ -47,24 +47,25 @@ int permute(int* arraypoint, int current, int end, int*checker_point)
 }
 
 
-void Permutation() {
-	//int data;
-	//printf("Enter a number \n");
-	//scanf_s("%d", &data);
-	int data[5] = { 1, 2, 3,4,5};
-	int* datapointer = &data[0];
+void Permutation(int* arr,int size) {
+	//below 3 lines are sample data used during testing
+	//int data[5] = { 1, 2, 3,4,5};
+	//int* datapointer = &data[0];
+	//int size = *(&data + 1) - data;
 
-	int size = *(&data + 1) - data;
+	
 
-	//printf("%d\n",size);
-	//ArrayPrint(datapointer, size);
-
+	//int ssize = *(&arr + 1) - arr; //something weird happens when we try to calculate size on an array that is passed in as a function argument...
+	//printf("Ssize is %d", ssize); //returns something in the 100,000's , probably an address?
 	int checker;
 	checker = 0;
 
-	checker=permute(datapointer, 0, size-1,&checker);
+	checker=permute(arr, 0, size-1,&checker);
 	printf("Number of permutations printed is %d\n", checker);
+
+	
 	//pass pointer to first element in array
+	//checker is just to make sure the correct number of permutations were made, can remove later if needed
 	return;
 }
 
