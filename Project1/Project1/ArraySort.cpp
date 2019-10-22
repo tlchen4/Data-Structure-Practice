@@ -28,12 +28,15 @@ void merger(int* arr, int left, int right, int mid) {
 	int i = 0;
 	//re-initialize i
 	int j = 0;
-	int k = 0;
+	int k = left;
+	
+	//so the problem with defining int k=0 here is that every recursion loop starts by overwriting starting from k=0, instead define k as left so that it still inserts at the beginning of the left piece but not necessarily at the beginining of the entire array (which is bad when resolving the right sided pieces whose "beginning" is at mid, not index 0)
 	//Index i will be used to track the current position in temporary left list, j for temporary right list, k for current position of insertion for original array
+	
 	
 	while (i < n1 && j<n2) {
 		//while will continue to loop until the statement is false, we require both i < n1 and j < n2 ,otherwise one of the lists is already used up
-		//***something strange happens here when n = 4 or more...
+		
 		if (leftlist[i] <= rightlist[j]) {
 			arr[k] = leftlist[i];
 			i++;
@@ -46,6 +49,7 @@ void merger(int* arr, int left, int right, int mid) {
 		k++;
 		
 	}
+	
 		
 	if (i == n1) {
 		//this means left side finished first, still need to replace the rest of temporary rightlist into the remainder of the original array
@@ -76,6 +80,8 @@ void mergesort(int* arr,int left,int right) {
 		int mid = left + (right - left) / 2;// (left + right) / 2 is the same thing but if left and right are large you can get overflow error more easily
 		mergesort(arr, left, mid);
 		mergesort(arr, mid + 1, right);
+		//the problem is that when this mergesort executes, merger is still going to have k=0 so initially "right" pieces are going to re-insert over left side before the pieces are ready to be combined
+		//this is fixed with k=left instead of k=0
 		merger(arr, left, right, mid);
 	}
 	
