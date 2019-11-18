@@ -28,6 +28,9 @@
     <Filter Include="Source Files\Queue">
       <UniqueIdentifier>{eb009117-66fe-4ccb-8eef-62b90f06cfcb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Binary Tree">
+      <UniqueIdentifier>{2345def6-9789-47a5-b887-bf0b1cb9e5ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Deletion.cpp">
@@ -83,6 +86,9 @@
     </ClCompile>
     <ClCompile Include="ArrayMain.cpp">
       <Filter>Source Files\Arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTree.cpp">
+      <Filter>Source Files\Binary Tree</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

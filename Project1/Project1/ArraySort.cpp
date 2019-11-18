@@ -87,6 +87,11 @@ void mergesort(int* arr,int left,int right) {
 	
 }
 
+void quicksort(int* arr) {
+
+
+	return;
+}
 
 void ArraySort(int* arr, int size) {
 		
@@ -95,7 +100,7 @@ void ArraySort(int* arr, int size) {
 	
 
 	while (flag == 1) {
-		printf("0-Quit\n1-Print array\n2-Merge Sort\n");
+		printf("0-Quit\n1-Print array\n2-Merge Sort\n3-qQuick Sort\n");
 		scanf_s("%d", &decision);
 
 		switch (decision) {
@@ -108,6 +113,9 @@ void ArraySort(int* arr, int size) {
 			break;
 		case 2:
 			mergesort(arr, 0, size - 1);
+			break;
+		case 3:
+			quicksort(arr);
 			break;
 		default:
 			printf("Invalid option, please try again\n");
