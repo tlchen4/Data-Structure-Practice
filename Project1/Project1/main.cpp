@@ -7,7 +7,7 @@ int main() {
 	int flag = 1;
 
 	while (flag == 1) {
-		printf("0 - Quit \n1-Singly Linked List \n2-Double Linked List \n3-Stack \n4-LLQueue\n5-Arrays \n");
+		printf("0 - Quit \n1-Singly Linked List \n2-Double Linked List \n3-Stack \n4-LLQueue\n5-Arrays \n6-Date \n");
 		scanf_s("%d", &decision);
 
 		switch (decision) {
@@ -30,6 +30,9 @@ int main() {
 			break;
 		case 5:
 			ArrayMain();
+			break;
+		case 6:
+			Date();
 			break;
 		default:
 			printf("Invalid input. Please try again. \n");

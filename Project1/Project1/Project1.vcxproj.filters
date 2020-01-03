@@ -90,6 +90,9 @@
     <ClCompile Include="BinaryTree.cpp">
       <Filter>Source Files\Binary Tree</Filter>
     </ClCompile>
+    <ClCompile Include="Date.cpp">
+      <Filter>Source Files\Arrays</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">
